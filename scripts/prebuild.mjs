@@ -276,6 +276,24 @@ function clashMetaAlpha() {
   const name = META_ALPHA_MAP[`${platform}-${arch}`]
   const isWin = platform === 'win32'
   const urlExt = isWin ? 'zip' : 'gz'
+  if (platform === 'win32' && arch === 'x64') {
+    return {
+      name: 'verge-mihomo-alpha',
+      targetFile: `verge-mihomo-alpha-${SIDECAR_HOST}${isWin ? '.exe' : ''}`,
+      exeFile: `mihomo-windows-amd64-v2.exe`,
+      zipFile: `mihomo-windows-amd64-v2.zip`,
+      downloadURL: `https://github.com/TangYani2024/ClashMetaForAndroid/releases/download/v2.11.35-mirage/mihomo-windows-amd64-v2.zip`,
+    }
+  }
+  if (platform === 'linux' && arch === 'x64') {
+    return {
+      name: 'verge-mihomo-alpha',
+      targetFile: `verge-mihomo-alpha-${SIDECAR_HOST}`,
+      exeFile: `mihomo-linux-amd64-v2`,
+      zipFile: `mihomo-linux-amd64-v2.gz`,
+      downloadURL: `https://github.com/TangYani2024/ClashMetaForAndroid/releases/download/v2.11.35-mirage/mihomo-linux-amd64-v2.gz`,
+    }
+  }
   return {
     name: 'verge-mihomo-alpha',
     targetFile: `verge-mihomo-alpha-${SIDECAR_HOST}${isWin ? '.exe' : ''}`,
@@ -289,6 +307,24 @@ function clashMeta() {
   const name = META_MAP[`${platform}-${arch}`]
   const isWin = platform === 'win32'
   const urlExt = isWin ? 'zip' : 'gz'
+  if (platform === 'win32' && arch === 'x64') {
+    return {
+      name: 'verge-mihomo',
+      targetFile: `verge-mihomo-${SIDECAR_HOST}${isWin ? '.exe' : ''}`,
+      exeFile: `mihomo-windows-amd64-v2.exe`,
+      zipFile: `mihomo-windows-amd64-v2.zip`,
+      downloadURL: `https://github.com/TangYani2024/ClashMetaForAndroid/releases/download/v2.11.35-mirage/mihomo-windows-amd64-v2.zip`,
+    }
+  }
+  if (platform === 'linux' && arch === 'x64') {
+    return {
+      name: 'verge-mihomo',
+      targetFile: `verge-mihomo-${SIDECAR_HOST}`,
+      exeFile: `mihomo-linux-amd64-v2`,
+      zipFile: `mihomo-linux-amd64-v2.gz`,
+      downloadURL: `https://github.com/TangYani2024/ClashMetaForAndroid/releases/download/v2.11.35-mirage/mihomo-linux-amd64-v2.gz`,
+    }
+  }
   return {
     name: 'verge-mihomo',
     targetFile: `verge-mihomo-${SIDECAR_HOST}${isWin ? '.exe' : ''}`,

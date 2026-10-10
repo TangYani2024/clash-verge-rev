@@ -905,6 +905,7 @@ export const GroupsEditorViewer = (props: Props) => {
                           'Hysteria2',
                           'WireGuard',
                           'Tuic',
+                          'Mirage',
                           'Mieru',
                           'Masque',
                           'AnyTLS',

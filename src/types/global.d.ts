@@ -807,6 +807,19 @@ interface IProxySnellConfig extends IProxyBaseConfig {
   udp?: boolean
   version?: number
 }
+// mirage
+interface IProxyMirageConfig extends IProxyBaseConfig {
+  name: string
+  type: 'mirage'
+  server?: string
+  port?: number
+  sni?: string
+  secret?: string
+  pool?: number
+  'skip-cert-verify'?: boolean
+  fingerprint?: string
+  alpn?: string[]
+}
 interface IProxyConfig
   extends IProxyBaseConfig,
     IProxyDirectConfig,
@@ -828,7 +841,8 @@ interface IProxyConfig
     IProxySudokuConfig,
     IProxyshadowsocksRConfig,
     IProxySmuxConfig,
-    IProxySnellConfig {
+    IProxySnellConfig,
+    IProxyMirageConfig {
   type:
     | 'ss'
     | 'ssr'
@@ -849,6 +863,7 @@ interface IProxyConfig
     | 'vless'
     | 'mieru'
     | 'sudoku'
+    | 'mirage'
 }
 
 interface IVergeConfig {
